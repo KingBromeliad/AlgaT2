@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="container" alignment="TOP_LEFT" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #83adb5;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuizController">
+   <children>
+      <VBox fx:id="pane" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #83adb5;">
+         <children>
+            <BorderPane prefHeight="1072.0" prefWidth="1921.0" style="-fx-background-color: #83adb5;">
+               <top>
+                  <HBox prefHeight="66.0" prefWidth="1280.0" style="-fx-background-color: #2e4045;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="46.0" prefWidth="249.0" text="ALGA T" textFill="WHITE">
+                           <font>
+                              <Font name="Adam" size="53.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox alignment="TOP_RIGHT" maxWidth="-Infinity" prefHeight="659.0" prefWidth="1079.0" style="-fx-background-color: transparent;" BorderPane.alignment="TOP_LEFT">
+                     <BorderPane.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <VBox prefHeight="568.0" prefWidth="684.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <HBox prefHeight="236.0" prefWidth="1059.0" style="-fx-background-color: #bfb5b2;">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label fx:id="question" prefHeight="224.0" prefWidth="776.0" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" top="60.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Arial" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="54.0" prefWidth="257.0" spacing="2.0" style="-fx-background-color: #2e4045;">
+                                       <HBox.margin>
+                                          <Insets bottom="175.0" left="20.0" right="4.0" top="4.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Rectangle id="box[0]" fx:id="box0" fill="#b8c9da" height="49.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+                                          <Rectangle fx:id="box1" fill="#b8c9da" height="49.0" layoutX="12.0" layoutY="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+                                          <Rectangle fx:id="box2" fill="#b8c9da" height="49.0" layoutX="63.0" layoutY="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+                                          <Rectangle fx:id="box3" fill="#b8c9da" height="49.0" layoutX="114.0" layoutY="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+                                          <Rectangle fx:id="box4" fill="#b8c9da" height="49.0" layoutX="165.0" layoutY="12.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="329.0" prefWidth="1116.0">
+                                 <children>
+                                    <VBox prefHeight="326.0" prefWidth="748.0" spacing="10.0">
+                                       <children>
+                                          <Label fx:id="option1" prefHeight="85.0" prefWidth="510.0" text="Option number 1:..." wrapText="true">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label fx:id="option2" layoutX="10.0" layoutY="10.0" prefHeight="85.0" prefWidth="510.0" text="Option number 2:..." wrapText="true">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="option3" layoutX="10.0" layoutY="60.0" prefHeight="85.0" prefWidth="510.0" text="Option number 3:..." wrapText="true">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="81.0" prefWidth="303.0" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#check" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: #c7bbc9; -fx-border-width: 1; -fx-border-color: #000000;" text="check">
+                                                   <font>
+                                                      <Font name="Adam" size="25.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="291.0" prefWidth="32.0" spacing="45.0">
+                                       <children>
+                                          <RadioButton fx:id="toggle1" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                                             <VBox.margin>
+                                                <Insets top="2.0" />
+                                             </VBox.margin>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="group1" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="toggle2" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" toggleGroup="$group1" />
+                                          <RadioButton fx:id="toggle3" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" toggleGroup="$group1" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="40.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <HBox fx:id="answerPane" prefHeight="326.0" prefWidth="696.0" style="-fx-background-color: #c7bbc9;">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="40.0" right="10.0" top="40.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label fx:id="answer" alignment="TOP_LEFT" prefHeight="266.0" prefWidth="674.0" wrapText="true">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.0" prefWidth="360.0" spacing="3.0" style="-fx-background-color: #5e3c58;">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#prevQuiz" style="-fx-background-color: transparent; -fx-border-width: 1; -fx-border-color: #ffffff;" text="&lt;" textFill="WHITE">
+                                 <font>
+                                    <Font name="Adam" size="25.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="13.0" layoutY="13.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-border-width: 1; -fx-border-color: #ffffff;" text="home" textFill="WHITE">
+                                 <font>
+                                    <Font name="Adam" size="25.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="button" layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#goToLesson" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-border-width: 1; -fx-border-color: #ffffff;" text="lesson" textFill="WHITE">
+                                 <font>
+                                    <Font name="Adam" size="25.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="165.0" layoutY="13.0" mnemonicParsing="false" onAction="#nextQuiz" style="-fx-background-color: transparent; -fx-border-width: 1; -fx-border-color: #ffffff;" text="&gt;" textFill="WHITE">
+                                 <font>
+                                    <Font name="Adam" size="25.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
